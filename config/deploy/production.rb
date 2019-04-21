@@ -21,7 +21,9 @@
 # role :web, %w{user1@primary.com user2@additional.com}, other_property: :other_value
 # role :db,  %w{deploy@example.com}
 
-
+role :app, %w{hello_world@hello_world.lailo.link}
+role :web, %w{hello_world@hello_world.lailo.link}
+role :db,  %w{hello_world@hello_world.lailo.link}
 
 # Configuration
 # =============
@@ -41,11 +43,12 @@
 #
 # Global options
 # --------------
-#  set :ssh_options, {
-#    keys: %w(/home/rlisowski/.ssh/id_rsa),
-#    forward_agent: false,
-#    auth_methods: %w(password)
-#  }
+ set :ssh_options, {
+   keys: %w(~/.ssh/lailo-dharmataylor-staging.pem),
+   forward_agent: false,
+   auth_methods: %w(13:e0:f8:bc:48:23:1a:7b:dd:82:cd:99:7d:bc:51:ce:41:de:b3:3d
+)
+ }
 #
 # The server-based syntax can be used to override options:
 # ------------------------------------
